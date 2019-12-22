@@ -3,7 +3,7 @@ class DipAuthenticator
 {
 public function verifyCode($authenticationid, $seedkey, $digits)
 {   
-$requesturl='http://localhost/dip_service/hosted/matchCode.php?authentication_id='.$authenticationid.'&seed_key='.$seedkey.'&digits='.$digits;
+$requesturl='https://webservice.dipauthenticator.com/matchCode.php?authentication_id='.$authenticationid.'&seed_key='.$seedkey.'&digits='.$digits;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -19,7 +19,7 @@ return $result['posts'];
 
 public function enableCode($authenticationid, $seedkey, $digits)
 {   
-$requesturl='http://localhost/dip_service/hosted/matchCode.php?authentication_id='.$authenticationid.'&seed_key='.$seedkey.'&digits='.$digits;
+$requesturl='https://webservice.dipauthenticator.com/matchCode.php?authentication_id='.$authenticationid.'&seed_key='.$seedkey.'&digits='.$digits;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
